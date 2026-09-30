@@ -46,8 +46,11 @@ const yearQuery = years
 const g = await gql(`{ user(login: "${USER}") {
   pullRequests { totalCount }
   issues { totalCount }
+  lastYear: contributionsCollection { contributionCalendar { totalContributions
+    weeks { contributionDays { date contributionCount contributionLevel } } } }
   ${yearQuery}
 } }`);
+const calendar = g.user.lastYear.contributionCalendar;
 const perYear = years
   .map((y) => ({ year: y, count: g.user[`y${y}`].contributionCalendar.totalContributions }))
   .filter((d) => d.count > 0);
@@ -382,7 +385,58 @@ function stats() {
 </svg>`;
 }
 
+// ---------- contribution grid ----------
+const LEVEL_FILL = {
+  NONE: "#ffffff", FIRST_QUARTILE: "#7a1f3d", SECOND_QUARTILE: "#c9184a",
+  THIRD_QUARTILE: "#ff4d6d", FOURTH_QUARTILE: "#ffb3c1",
+};
+
+function grid() {
+  const W = 1200, H = 250, CELL = 15, GAP = 4, P = CELL + GAP;
+  const weeks = calendar.weeks;
+  const GX = (W - weeks.length * P + GAP) / 2, GY = 62;
+  const days = weeks.flatMap((w) => w.contributionDays);
+  const best = days.reduce((a, d) => (d.contributionCount > a.contributionCount ? d : a), days[0]);
+  const active = days.filter((d) => d.contributionCount > 0).length;
+
+  const SWEEP = 6; // seconds for the glow to cross the grid
+  const cells = weeks.flatMap((w, wi) =>
+    w.contributionDays.map((d) => {
+      const row = new Date(d.date + "T00:00:00Z").getUTCDay();
+      const fill = LEVEL_FILL[d.contributionLevel];
+      if (!fill) throw new Error(`unknown level ${d.contributionLevel}`);
+      const none = d.contributionLevel === "NONE";
+      const x = GX + wi * P, y = GY + row * P;
+      const pop = (wi * 0.025 + row * 0.02).toFixed(3);
+      const glow = none ? "" :
+        `<animate attributeName="opacity" values="1;1;0.35;1;1" keyTimes="0;${(wi / weeks.length * 0.8).toFixed(3)};${(wi / weeks.length * 0.8 + 0.04).toFixed(3)};${(wi / weeks.length * 0.8 + 0.1).toFixed(3)};1" dur="${SWEEP}s" begin="2.5s" repeatCount="indefinite"/>`;
+      return `<rect class="c" style="animation-delay:${pop}s" x="${x}" y="${y}" width="${CELL}" height="${CELL}" rx="4" fill="${fill}"${none ? ' fill-opacity="0.06"' : ""}>${glow}</rect>`;
+    })
+  );
+
+  const bestDate = new Date(best.date + "T00:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${fmt(calendar.totalContributions)} contributions in the last year">
+<defs>${background(W, H)}</defs>
+<style>${baseCss}
+  .c { transform-box: fill-box; transform-origin: center; opacity: 0; animation: pop .5s cubic-bezier(.3,1.6,.5,1) forwards; }
+  @keyframes pop { from { opacity: 0; transform: scale(0.2); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .c { opacity: 1; } }
+</style>
+<g clip-path="url(#frame)">
+  ${backdrop(W, H)}
+  <text x="${GX}" y="40" font-family="${FONT_MONO}" font-size="16" fill="#3ddc97">// ${fmt(calendar.totalContributions)} contributions in the last year</text>
+  <text x="${W - GX}" y="40" text-anchor="end" font-family="${FONT_MONO}" font-size="13" fill="#9aa3c7">active ${active}/${days.length} days · best ${bestDate} (${best.contributionCount})</text>
+  ${cells.join("\n  ")}
+  <text x="${W - GX - 44 - 5 * 16 - 6}" y="${GY + 7 * P + 22}" text-anchor="end" font-family="${FONT_MONO}" font-size="12" fill="#7c85aa">less</text>
+  ${Object.values(LEVEL_FILL).map((f, i) => `<rect x="${W - GX - 44 - (5 - i) * 16}" y="${GY + 7 * P + 11}" width="12" height="12" rx="3" fill="${f}"${i === 0 ? ' fill-opacity="0.06"' : ""}/>`).join("")}
+  <text x="${W - GX}" y="${GY + 7 * P + 22}" text-anchor="end" font-family="${FONT_MONO}" font-size="12" fill="#7c85aa">more</text>
+</g>
+<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="22" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+</svg>`;
+}
+
 mkdirSync("assets", { recursive: true });
+writeFileSync("assets/grid.svg", grid());
 writeFileSync("assets/hero.svg", hero());
 writeFileSync("assets/stats.svg", stats());
-console.log("wrote assets/hero.svg, assets/stats.svg");
+console.log("wrote assets/hero.svg, assets/stats.svg, assets/grid.svg");

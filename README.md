@@ -44,10 +44,7 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lolieatapple/lolieatapple/output/snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/lolieatapple/lolieatapple/output/snake.svg" width="100%" alt="snake eating my contributions" />
-  </picture>
+  <img src="assets/grid.svg" width="100%" alt="contribution calendar" />
 </p>
 
-<p align="center"><sub>🍏 The stats refresh every day, and the snake eats my commits twice a day.</sub></p>
+<p align="center"><sub>🍏 Every chart here is built from the GitHub API by <a href="scripts/generate.mjs">one script</a> and refreshed daily.</sub></p>
