@@ -153,13 +153,16 @@ function hero() {
       cursorVals.push((LX + Number(v) + 2).toFixed(1));
       cursorTimes.push(times[k]);
     });
-    return `
-    <clipPath id="type${i}"><rect x="${LX}" y="${LY - 24}" height="34" width="0">
-      <animate attributeName="width" dur="${DUR}s" repeatCount="indefinite" calcMode="discrete"
-        values="${vals.join(";")}" keyTimes="${times.join(";")}"/>
-    </rect></clipPath>
-    <text x="${LX}" y="${LY}" textLength="${(n * CW).toFixed(1)}" lengthAdjust="spacingAndGlyphs"
-      clip-path="url(#type${i})" font-family="${FONT_MONO}" font-size="22" fill="#e6e9f5">${esc(line)}</text>`;
+    // One <text> per character, toggled by opacity. Safari does not repaint
+    // an animated clipPath inside <img>, so the lines must not rely on one.
+    return [...line].map((ch, c) => {
+      if (ch === " ") return "";
+      const on = start + (TYPE * (c + 1)) / n;
+      let s = 1;
+      while ((n * (steps - s)) / steps >= c + 1) s++;
+      const off = eraseAt + (ERASE * s) / steps;
+      return `<text x="${(LX + c * CW + CW / 2).toFixed(1)}" y="${LY}" opacity="0">${esc(ch)}<animate attributeName="opacity" dur="${DUR}s" repeatCount="indefinite" calcMode="discrete" values="0;1;0" keyTimes="0;${kt(on)};${kt(off)}"/></text>`;
+    }).join("");
   });
   // dedupe keyTimes that collide (SMIL needs increasing values)
   const cv = [], ct = [];
@@ -279,7 +282,7 @@ function hero() {
   <text class="rise" style="animation-delay:.1s" x="${TX}" y="118" font-family="${FONT_MONO}" font-size="20" fill="#3ddc97">// hi there, I'm</text>
   <text class="rise" style="animation-delay:.3s" x="${TX - 4}" y="200" font-family="${FONT_SANS}" font-size="80" font-weight="800" letter-spacing="-2" fill="url(#title)">lolieatapple</text>
   <text x="${TX}" y="${LY}" font-family="${FONT_MONO}" font-size="22" fill="#ff4d6d" font-weight="700">❯</text>
-  ${lineEls.join("")}
+  <g font-family="${FONT_MONO}" font-size="22" fill="#e6e9f5" text-anchor="middle">${lineEls.join("")}</g>
   <rect class="cursor" x="${LX}" y="${LY - 20}" width="11" height="25" fill="#3ddc97">
     <animate attributeName="x" dur="${DUR}s" repeatCount="indefinite" calcMode="discrete" values="${cv.join(";")}" keyTimes="${ct.join(";")}"/>
   </rect>
