@@ -9,8 +9,22 @@
   <img src="https://komarev.com/ghpvc/?username=lolieatapple&style=flat-square&color=8b5cf6&label=profile+views" alt="profile views" />
 </p>
 
+### 🚀 Now building
+
+<table><tr><td>
+
+**[AutoDesktop](https://github.com/Auto-Wallet/auto-desktop)** — a light, native **DeFi desktop wallet** with a built-in dApp browser.
+Built on Tauri 2 + React + Rust. Keys stay in an encrypted Rust vault and never touch a webview; every signature opens its own approval window.
+
+[![release](https://img.shields.io/github/v/release/Auto-Wallet/auto-desktop?style=flat-square&color=3ddc97&label=release)](https://github.com/Auto-Wallet/auto-desktop/releases)
+[![site](https://img.shields.io/badge/site-auto--wallet.nannan.app-ff4d6d?style=flat-square)](https://auto-wallet.nannan.app)
+[![stars](https://img.shields.io/github/stars/Auto-Wallet/auto-desktop?style=flat-square&color=8b5cf6)](https://github.com/Auto-Wallet/auto-desktop)
+
+</td></tr></table>
+
 ### 🍎 About me
 
+- 🦊 Right now I'm building **[AutoDesktop](https://github.com/Auto-Wallet/auto-desktop)**, a DeFi desktop wallet.
 - 🌉 I build **cross-chain bridges** at Wanchain — 1,200+ commits to [wandevs](https://github.com/wandevs).
 - 💸 I write **DeFi tools**: flash-loan arbitrage, Aave rescue scripts, and EIP-7702 revoke tools.
 - 🦀 Lately I write **Rust**, mostly small games with macroquad.
