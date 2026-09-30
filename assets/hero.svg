@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="lolieatapple — cross-chain, DeFi and Rust builder">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0b1020"/>
+    <stop offset="0.55" stop-color="#11142b"/>
+    <stop offset="1" stop-color="#1c1036"/>
+  </linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+  </pattern>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="45"/></filter>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="frame"><rect width="1200" height="420" rx="22"/></clipPath>
+  <linearGradient id="title" x1="0" y1="0" x2="480" y2="0" gradientUnits="userSpaceOnUse" spreadMethod="reflect">
+    <stop offset="0" stop-color="#ff4d6d"/><stop offset="0.35" stop-color="#ffb86b"/>
+    <stop offset="0.7" stop-color="#c084fc"/><stop offset="1" stop-color="#22d3ee"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0;480 0" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <radialGradient id="appleFill" cx="0.35" cy="0.3" r="0.8">
+    <stop offset="0" stop-color="#ff8a95"/><stop offset="0.45" stop-color="#ff3b5c"/><stop offset="1" stop-color="#a3123a"/>
+  </radialGradient>
+  <mask id="bite" maskUnits="userSpaceOnUse" x="-120" y="-130" width="240" height="260">
+    <rect x="-120" y="-130" width="240" height="260" fill="#fff"/>
+    <circle cx="78" cy="-18" r="0" fill="#000">
+      <animate attributeName="r" dur="10s" repeatCount="indefinite"
+        values="0;0;27;27;0" keyTimes="0;0.12;0.15;0.93;1"/></circle>
+    <circle cx="74" cy="38" r="0" fill="#000">
+      <animate attributeName="r" dur="10s" repeatCount="indefinite"
+        values="0;0;27;27;0" keyTimes="0;0.32;0.35;0.93;1"/></circle>
+    <circle cx="-80" cy="12" r="0" fill="#000">
+      <animate attributeName="r" dur="10s" repeatCount="indefinite"
+        values="0;0;27;27;0" keyTimes="0;0.52;0.55;0.93;1"/></circle>
+    <circle cx="-62" cy="66" r="0" fill="#000">
+      <animate attributeName="r" dur="10s" repeatCount="indefinite"
+        values="0;0;27;27;0" keyTimes="0;0.72;0.75;0.93;1"/></circle>
+  </mask>
+  <linearGradient id="rail" x1="10" y1="0" x2="1190" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset="0.1" stop-color="#ffffff" stop-opacity="0.25"/>
+    <stop offset="0.9" stop-color="#ffffff" stop-opacity="0.25"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<style>
+  .orb { animation: drift 14s ease-in-out infinite alternate; }
+  .o2 { animation-duration: 18s; animation-delay: -4s; }
+  .o3 { animation-duration: 22s; animation-delay: -9s; }
+  @keyframes drift { 0% { transform: translate(0,0); } 50% { transform: translate(-60px,30px); } 100% { transform: translate(40px,-25px); } }
+  .rise { opacity: 0; animation: rise .8s cubic-bezier(.2,.8,.2,1) forwards; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .rise { opacity: 1; } }
+  .apple { animation: bob 4s ease-in-out infinite; transform-origin: 170px 185px; }
+  @keyframes bob { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-10px) rotate(3deg); } }
+  .cursor { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .dash { stroke-dasharray: 6 10; animation: flow 1.2s linear infinite; }
+  @keyframes flow { to { stroke-dashoffset: -16; } }
+</style>
+<g clip-path="url(#frame)">
+  
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect width="1200" height="420" fill="url(#grid)"/>
+  <circle class="orb o1" cx="960" cy="84" r="140" fill="#8b5cf6" opacity="0.35" filter="url(#blur)"/>
+  <circle class="orb o2" cx="180" cy="357" r="120" fill="#ff4d6d" opacity="0.28" filter="url(#blur)"/>
+  <circle class="orb o3" cx="660" cy="252" r="110" fill="#22d3ee" opacity="0.18" filter="url(#blur)"/>
+
+  <g class="apple">
+    <ellipse cx="170" cy="300" rx="70" ry="9" fill="#000" opacity="0.35"/>
+    <g transform="translate(170 185)">
+      <g mask="url(#bite)">
+        <path d="M0 -58 C28 -84 86 -70 86 -2 C86 58 48 100 20 100 C8 100 6 92 0 92 C-6 92 -8 100 -20 100 C-48 100 -86 58 -86 -2 C-86 -70 -28 -84 0 -58 Z" fill="url(#appleFill)"/>
+        <ellipse cx="-38" cy="-30" rx="14" ry="26" fill="#fff" opacity="0.28" transform="rotate(25 -38 -30)"/>
+      </g>
+      <path d="M0 -58 C1 -76 6 -88 14 -98" fill="none" stroke="#6b3e1f" stroke-width="6" stroke-linecap="round"/>
+      <path d="M8 -80 C18 -106 50 -110 62 -100 C50 -80 24 -72 8 -80 Z" fill="#3ddc97"/>
+      <circle r="3" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.12;0.13;0.20;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="80;80;80;110;110" keyTimes="0;0.12;0.13;0.20;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="-18;-18;-18;-38;-38" keyTimes="0;0.12;0.13;0.20;1"/>
+      </circle>
+      <circle r="2.4" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.12;0.13;0.20;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="80;80;80;128;128" keyTimes="0;0.12;0.13;0.20;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="-18;-18;-18;-16;-16" keyTimes="0;0.12;0.13;0.20;1"/>
+      </circle>
+      <circle r="1.8" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.12;0.13;0.20;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="80;80;80;146;146" keyTimes="0;0.12;0.13;0.20;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="-18;-18;-18;6;6" keyTimes="0;0.12;0.13;0.20;1"/>
+      </circle>
+      <circle r="3" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.32;0.33;0.40;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="80;80;80;110;110" keyTimes="0;0.32;0.33;0.40;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="38;38;38;18;18" keyTimes="0;0.32;0.33;0.40;1"/>
+      </circle>
+      <circle r="2.4" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.32;0.33;0.40;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="80;80;80;128;128" keyTimes="0;0.32;0.33;0.40;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="38;38;38;40;40" keyTimes="0;0.32;0.33;0.40;1"/>
+      </circle>
+      <circle r="1.8" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.32;0.33;0.40;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="80;80;80;146;146" keyTimes="0;0.32;0.33;0.40;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="38;38;38;62;62" keyTimes="0;0.32;0.33;0.40;1"/>
+      </circle>
+      <circle r="3" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.52;0.53;0.60;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="-80;-80;-80;-110;-110" keyTimes="0;0.52;0.53;0.60;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="12;12;12;-8;-8" keyTimes="0;0.52;0.53;0.60;1"/>
+      </circle>
+      <circle r="2.4" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.52;0.53;0.60;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="-80;-80;-80;-128;-128" keyTimes="0;0.52;0.53;0.60;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="12;12;12;14;14" keyTimes="0;0.52;0.53;0.60;1"/>
+      </circle>
+      <circle r="1.8" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.52;0.53;0.60;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="-80;-80;-80;-146;-146" keyTimes="0;0.52;0.53;0.60;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="12;12;12;36;36" keyTimes="0;0.52;0.53;0.60;1"/>
+      </circle>
+      <circle r="3" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.72;0.73;0.80;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="-80;-80;-80;-110;-110" keyTimes="0;0.72;0.73;0.80;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="66;66;66;46;46" keyTimes="0;0.72;0.73;0.80;1"/>
+      </circle>
+      <circle r="2.4" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.72;0.73;0.80;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="-80;-80;-80;-128;-128" keyTimes="0;0.72;0.73;0.80;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="66;66;66;68;68" keyTimes="0;0.72;0.73;0.80;1"/>
+      </circle>
+      <circle r="1.8" fill="#ffd6dc" opacity="0">
+        <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;0;1;0;0" keyTimes="0;0.72;0.73;0.80;1"/>
+        <animate attributeName="cx" dur="10s" repeatCount="indefinite" values="-80;-80;-80;-146;-146" keyTimes="0;0.72;0.73;0.80;1"/>
+        <animate attributeName="cy" dur="10s" repeatCount="indefinite" values="66;66;66;90;90" keyTimes="0;0.72;0.73;0.80;1"/>
+      </circle>
+    </g>
+  </g>
+
+  <text class="rise" style="animation-delay:.1s" x="330" y="118" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="20" fill="#3ddc97">// hi there, I'm</text>
+  <text class="rise" style="animation-delay:.3s" x="326" y="200" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="80" font-weight="800" letter-spacing="-2" fill="url(#title)">lolieatapple</text>
+  <text x="330" y="262" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="22" fill="#ff4d6d" font-weight="700">❯</text>
+  
+    <clipPath id="type0"><rect x="360" y="238" height="34" width="0">
+      <animate attributeName="width" dur="16s" repeatCount="indefinite" calcMode="discrete"
+        values="0;13.2;26.4;39.6;52.8;66.0;79.2;92.4;105.6;118.8;132.0;145.2;158.4;171.6;184.8;198.0;211.2;224.4;237.6;250.8;264.0;277.2;290.4;303.6;316.8;330.0;343.2;356.4;369.6;382.8;396.0;409.2;422.4;435.6;448.8;462.0;475.2;488.4;501.6;514.8;450.4;386.1;321.8;257.4;193.0;128.7;64.3;0.0" keyTimes="0;0.0026;0.0051;0.0077;0.0103;0.0128;0.0154;0.0179;0.0205;0.0231;0.0256;0.0282;0.0308;0.0333;0.0359;0.0385;0.0410;0.0436;0.0462;0.0487;0.0513;0.0538;0.0564;0.0590;0.0615;0.0641;0.0667;0.0692;0.0718;0.0744;0.0769;0.0795;0.0821;0.0846;0.0872;0.0897;0.0923;0.0949;0.0974;0.1000;0.2039;0.2078;0.2117;0.2156;0.2195;0.2234;0.2273;0.2313"/>
+    </rect></clipPath>
+    <text x="360" y="262" textLength="514.8" lengthAdjust="spacingAndGlyphs"
+      clip-path="url(#type0)" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="22" fill="#e6e9f5">building cross-chain bridges @ Wanchain</text>
+    <clipPath id="type1"><rect x="360" y="238" height="34" width="0">
+      <animate attributeName="width" dur="16s" repeatCount="indefinite" calcMode="discrete"
+        values="0;0;13.2;26.4;39.6;52.8;66.0;79.2;92.4;105.6;118.8;132.0;145.2;158.4;171.6;184.8;198.0;211.2;224.4;237.6;250.8;264.0;277.2;290.4;303.6;316.8;330.0;343.2;356.4;369.6;382.8;396.0;409.2;422.4;435.6;448.8;462.0;475.2;488.4;501.6;514.8;450.4;386.1;321.8;257.4;193.0;128.7;64.3;0.0" keyTimes="0;0.2500;0.2526;0.2551;0.2577;0.2603;0.2628;0.2654;0.2679;0.2705;0.2731;0.2756;0.2782;0.2808;0.2833;0.2859;0.2885;0.2910;0.2936;0.2962;0.2987;0.3013;0.3038;0.3064;0.3090;0.3115;0.3141;0.3167;0.3192;0.3218;0.3244;0.3269;0.3295;0.3321;0.3346;0.3372;0.3397;0.3423;0.3449;0.3474;0.3500;0.4539;0.4578;0.4617;0.4656;0.4695;0.4734;0.4773;0.4812"/>
+    </rect></clipPath>
+    <text x="360" y="262" textLength="514.8" lengthAdjust="spacingAndGlyphs"
+      clip-path="url(#type1)" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="22" fill="#e6e9f5">shipping DeFi bots in TypeScript &amp; Rust</text>
+    <clipPath id="type2"><rect x="360" y="238" height="34" width="0">
+      <animate attributeName="width" dur="16s" repeatCount="indefinite" calcMode="discrete"
+        values="0;0;13.2;26.4;39.6;52.8;66.0;79.2;92.4;105.6;118.8;132.0;145.2;158.4;171.6;184.8;198.0;211.2;224.4;237.6;250.8;264.0;277.2;290.4;303.6;316.8;330.0;343.2;356.4;369.6;382.8;396.0;409.2;422.4;435.6;448.8;462.0;475.2;488.4;501.6;438.9;376.2;313.5;250.8;188.1;125.4;62.7;0.0" keyTimes="0;0.5000;0.5026;0.5053;0.5079;0.5105;0.5132;0.5158;0.5184;0.5211;0.5237;0.5263;0.5289;0.5316;0.5342;0.5368;0.5395;0.5421;0.5447;0.5474;0.5500;0.5526;0.5553;0.5579;0.5605;0.5632;0.5658;0.5684;0.5711;0.5737;0.5763;0.5789;0.5816;0.5842;0.5868;0.5895;0.5921;0.5947;0.5974;0.6000;0.7039;0.7078;0.7117;0.7156;0.7195;0.7234;0.7273;0.7312"/>
+    </rect></clipPath>
+    <text x="360" y="262" textLength="501.6" lengthAdjust="spacingAndGlyphs"
+      clip-path="url(#type2)" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="22" fill="#e6e9f5">writing Claude Code skills &amp; CLI tools</text>
+    <clipPath id="type3"><rect x="360" y="238" height="34" width="0">
+      <animate attributeName="width" dur="16s" repeatCount="indefinite" calcMode="discrete"
+        values="0;0;13.2;26.4;39.6;52.8;66.0;79.2;92.4;105.6;118.8;132.0;145.2;158.4;171.6;184.8;198.0;211.2;224.4;237.6;250.8;264.0;277.2;290.4;303.6;316.8;330.0;343.2;356.4;369.6;382.8;396.0;346.5;297.0;247.5;198.0;148.5;99.0;49.5;0.0" keyTimes="0;0.7500;0.7533;0.7567;0.7600;0.7633;0.7667;0.7700;0.7733;0.7767;0.7800;0.7833;0.7867;0.7900;0.7933;0.7967;0.8000;0.8033;0.8067;0.8100;0.8133;0.8167;0.8200;0.8233;0.8267;0.8300;0.8333;0.8367;0.8400;0.8433;0.8467;0.8500;0.9539;0.9578;0.9617;0.9656;0.9695;0.9734;0.9773;0.9812"/>
+    </rect></clipPath>
+    <text x="360" y="262" textLength="396.0" lengthAdjust="spacingAndGlyphs"
+      clip-path="url(#type3)" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="22" fill="#e6e9f5">making tiny Rust games for fun</text>
+  <rect class="cursor" x="360" y="242" width="11" height="25" fill="#3ddc97">
+    <animate attributeName="x" dur="16s" repeatCount="indefinite" calcMode="discrete" values="362.0;375.2;388.4;401.6;414.8;428.0;441.2;454.4;467.6;480.8;494.0;507.2;520.4;533.6;546.8;560.0;573.2;586.4;599.6;612.8;626.0;639.2;652.4;665.6;678.8;692.0;705.2;718.4;731.6;744.8;758.0;771.2;784.4;797.6;810.8;824.0;837.2;850.4;863.6;876.8;812.4;748.1;683.8;619.4;555.0;490.7;426.3;362.0;362.0;375.2;388.4;401.6;414.8;428.0;441.2;454.4;467.6;480.8;494.0;507.2;520.4;533.6;546.8;560.0;573.2;586.4;599.6;612.8;626.0;639.2;652.4;665.6;678.8;692.0;705.2;718.4;731.6;744.8;758.0;771.2;784.4;797.6;810.8;824.0;837.2;850.4;863.6;876.8;812.4;748.1;683.8;619.4;555.0;490.7;426.3;362.0;362.0;375.2;388.4;401.6;414.8;428.0;441.2;454.4;467.6;480.8;494.0;507.2;520.4;533.6;546.8;560.0;573.2;586.4;599.6;612.8;626.0;639.2;652.4;665.6;678.8;692.0;705.2;718.4;731.6;744.8;758.0;771.2;784.4;797.6;810.8;824.0;837.2;850.4;863.6;800.9;738.2;675.5;612.8;550.1;487.4;424.7;362.0;362.0;375.2;388.4;401.6;414.8;428.0;441.2;454.4;467.6;480.8;494.0;507.2;520.4;533.6;546.8;560.0;573.2;586.4;599.6;612.8;626.0;639.2;652.4;665.6;678.8;692.0;705.2;718.4;731.6;744.8;758.0;708.5;659.0;609.5;560.0;510.5;461.0;411.5;362.0;362.0" keyTimes="0;0.0026;0.0051;0.0077;0.0103;0.0128;0.0154;0.0179;0.0205;0.0231;0.0256;0.0282;0.0308;0.0333;0.0359;0.0385;0.0410;0.0436;0.0462;0.0487;0.0513;0.0538;0.0564;0.0590;0.0615;0.0641;0.0667;0.0692;0.0718;0.0744;0.0769;0.0795;0.0821;0.0846;0.0872;0.0897;0.0923;0.0949;0.0974;0.1000;0.2039;0.2078;0.2117;0.2156;0.2195;0.2234;0.2273;0.2313;0.2500;0.2526;0.2551;0.2577;0.2603;0.2628;0.2654;0.2679;0.2705;0.2731;0.2756;0.2782;0.2808;0.2833;0.2859;0.2885;0.2910;0.2936;0.2962;0.2987;0.3013;0.3038;0.3064;0.3090;0.3115;0.3141;0.3167;0.3192;0.3218;0.3244;0.3269;0.3295;0.3321;0.3346;0.3372;0.3397;0.3423;0.3449;0.3474;0.3500;0.4539;0.4578;0.4617;0.4656;0.4695;0.4734;0.4773;0.4812;0.5000;0.5026;0.5053;0.5079;0.5105;0.5132;0.5158;0.5184;0.5211;0.5237;0.5263;0.5289;0.5316;0.5342;0.5368;0.5395;0.5421;0.5447;0.5474;0.5500;0.5526;0.5553;0.5579;0.5605;0.5632;0.5658;0.5684;0.5711;0.5737;0.5763;0.5789;0.5816;0.5842;0.5868;0.5895;0.5921;0.5947;0.5974;0.6000;0.7039;0.7078;0.7117;0.7156;0.7195;0.7234;0.7273;0.7312;0.7500;0.7533;0.7567;0.7600;0.7633;0.7667;0.7700;0.7733;0.7767;0.7800;0.7833;0.7867;0.7900;0.7933;0.7967;0.8000;0.8033;0.8067;0.8100;0.8133;0.8167;0.8200;0.8233;0.8267;0.8300;0.8333;0.8367;0.8400;0.8433;0.8467;0.8500;0.9539;0.9578;0.9617;0.9656;0.9695;0.9734;0.9773;0.9812;1"/>
+  </rect>
+  <g class="rise" style="animation-delay:1s">
+      <rect x="330" y="292" width="62.4" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="361.2" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">Web3</text></g>
+  <g class="rise" style="animation-delay:1.12s">
+      <rect x="402.4" y="292" width="122.6" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="463.7" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">Cross-chain</text></g>
+  <g class="rise" style="animation-delay:1.24s">
+      <rect x="535" y="292" width="62.4" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="566.2" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">DeFi</text></g>
+  <g class="rise" style="animation-delay:1.3599999999999999s">
+      <rect x="607.4" y="292" width="96.8" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="655.8" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">Solidity</text></g>
+  <g class="rise" style="animation-delay:1.48s">
+      <rect x="714.1999999999999" y="292" width="114" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="771.1999999999999" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">TypeScript</text></g>
+  <g class="rise" style="animation-delay:1.6s">
+      <rect x="838.1999999999999" y="292" width="62.4" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="869.4" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">Rust</text></g>
+  <g class="rise" style="animation-delay:1.72s">
+      <rect x="910.5999999999999" y="292" width="105.39999999999999" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="963.3" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">AI agents</text></g>
+  <g class="rise" style="animation-delay:1.8399999999999999s">
+      <rect x="1026" y="292" width="71" height="30" rx="15" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.14"/>
+      <text x="1061.5" y="312" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#c8cde4">macOS</text></g>
+
+  <line x1="10" y1="378" x2="1190" y2="378" stroke="url(#rail)" stroke-width="2" class="dash"/>
+  <circle r="4.5" fill="#3ddc97" filter="url(#glow)">
+      <animateMotion path="M70 378H1130" dur="6s" begin="0s" repeatCount="indefinite"/></circle>
+  <circle r="4.5" fill="#ff4d6d" filter="url(#glow)">
+      <animateMotion path="M1130 378H70" dur="7.5s" begin="1.2s" repeatCount="indefinite"/></circle>
+  <circle r="4.5" fill="#22d3ee" filter="url(#glow)">
+      <animateMotion path="M372.85714285714283 378H1130" dur="4.5s" begin="2.5s" repeatCount="indefinite"/></circle>
+  <circle r="4.5" fill="#c084fc" filter="url(#glow)">
+      <animateMotion path="M978.5714285714284 378H70" dur="5s" begin="3.3s" repeatCount="indefinite"/></circle>
+  <g>
+      <circle cx="70" cy="378" r="9" fill="none" stroke="#8c9eff" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="70" cy="378" r="8" fill="#0b1020" stroke="#8c9eff" stroke-width="2.5"/>
+      <circle cx="70" cy="378" r="3" fill="#8c9eff"/>
+      <text x="70" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#8c9eff" opacity="0.9">ETH</text>
+    </g>
+  <g>
+      <circle cx="221.42857142857142" cy="378" r="9" fill="none" stroke="#f7931a" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="0.37s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="0.37s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="221.42857142857142" cy="378" r="8" fill="#0b1020" stroke="#f7931a" stroke-width="2.5"/>
+      <circle cx="221.42857142857142" cy="378" r="3" fill="#f7931a"/>
+      <text x="221.42857142857142" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#f7931a" opacity="0.9">BTC</text>
+    </g>
+  <g>
+      <circle cx="372.85714285714283" cy="378" r="9" fill="none" stroke="#2a6af1" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="0.74s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="0.74s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="372.85714285714283" cy="378" r="8" fill="#0b1020" stroke="#2a6af1" stroke-width="2.5"/>
+      <circle cx="372.85714285714283" cy="378" r="3" fill="#2a6af1"/>
+      <text x="372.85714285714283" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#2a6af1" opacity="0.9">WAN</text>
+    </g>
+  <g>
+      <circle cx="524.2857142857142" cy="378" r="9" fill="none" stroke="#f3ba2f" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="1.1099999999999999s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="1.1099999999999999s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="524.2857142857142" cy="378" r="8" fill="#0b1020" stroke="#f3ba2f" stroke-width="2.5"/>
+      <circle cx="524.2857142857142" cy="378" r="3" fill="#f3ba2f"/>
+      <text x="524.2857142857142" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#f3ba2f" opacity="0.9">BNB</text>
+    </g>
+  <g>
+      <circle cx="675.7142857142857" cy="378" r="9" fill="none" stroke="#28a0f0" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="1.48s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="1.48s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="675.7142857142857" cy="378" r="8" fill="#0b1020" stroke="#28a0f0" stroke-width="2.5"/>
+      <circle cx="675.7142857142857" cy="378" r="3" fill="#28a0f0"/>
+      <text x="675.7142857142857" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#28a0f0" opacity="0.9">ARB</text>
+    </g>
+  <g>
+      <circle cx="827.1428571428571" cy="378" r="9" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="1.85s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="1.85s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="827.1428571428571" cy="378" r="8" fill="#0b1020" stroke="#3b82f6" stroke-width="2.5"/>
+      <circle cx="827.1428571428571" cy="378" r="3" fill="#3b82f6"/>
+      <text x="827.1428571428571" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#3b82f6" opacity="0.9">BASE</text>
+    </g>
+  <g>
+      <circle cx="978.5714285714284" cy="378" r="9" fill="none" stroke="#ff4d4f" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="2.2199999999999998s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="2.2199999999999998s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="978.5714285714284" cy="378" r="8" fill="#0b1020" stroke="#ff4d4f" stroke-width="2.5"/>
+      <circle cx="978.5714285714284" cy="378" r="3" fill="#ff4d4f"/>
+      <text x="978.5714285714284" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#ff4d4f" opacity="0.9">TRX</text>
+    </g>
+  <g>
+      <circle cx="1130" cy="378" r="9" fill="none" stroke="#9aa4b8" stroke-width="2" opacity="0">
+        <animate attributeName="r" values="9;22" dur="3s" begin="2.59s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="3s" begin="2.59s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="1130" cy="378" r="8" fill="#0b1020" stroke="#9aa4b8" stroke-width="2.5"/>
+      <circle cx="1130" cy="378" r="3" fill="#9aa4b8"/>
+      <text x="1130" y="361" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="11" fill="#9aa4b8" opacity="0.9">XRP</text>
+    </g>
+</g>
+<rect x="0.5" y="0.5" width="1199" height="419" rx="22" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+</svg>
