@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="1200" height="250" role="img" aria-label="2,605 contributions in the last year">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="1200" height="250" role="img" aria-label="2,606 contributions in the last year">
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#0b1020"/>
@@ -33,7 +33,7 @@
   <circle class="orb o1" cx="960" cy="50" r="140" fill="#8b5cf6" opacity="0.35" filter="url(#blur)"/>
   <circle class="orb o2" cx="180" cy="212.5" r="120" fill="#ff4d6d" opacity="0.28" filter="url(#blur)"/>
   <circle class="orb o3" cx="660" cy="150" r="110" fill="#22d3ee" opacity="0.18" filter="url(#blur)"/>
-  <text x="98.5" y="40" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#3ddc97">// 2,605 contributions in the last year</text>
+  <text x="98.5" y="40" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#3ddc97">// 2,606 contributions in the last year</text>
   <text x="1101.5" y="40" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" fill="#9aa3c7">active 235/370 days · best Feb 5, 2026 (65)</text>
   <rect class="c" style="animation-delay:0.000s" x="98.5" y="62" width="15" height="15" rx="4" fill="#7a1f3d"><animate attributeName="opacity" values="1;1;0.35;1;1" keyTimes="0;0.000;0.040;0.100;1" dur="6s" begin="2.5s" repeatCount="indefinite"/></rect>
   <rect class="c" style="animation-delay:0.020s" x="98.5" y="81" width="15" height="15" rx="4" fill="#ffffff" fill-opacity="0.06"></rect>
