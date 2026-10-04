@@ -40,7 +40,7 @@
   <circle class="orb o2" cx="180" cy="399.5" r="120" fill="#ff4d6d" opacity="0.28" filter="url(#blur)"/>
   <circle class="orb o3" cx="660" cy="282" r="110" fill="#22d3ee" opacity="0.18" filter="url(#blur)"/>
   <text x="40" y="42" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#3ddc97">// by the numbers</text>
-  <text x="1160" y="42" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5d6690">auto-updated 2026-10-03</text>
+  <text x="1160" y="42" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5d6690">auto-updated 2026-10-04</text>
   <g class="rise" style="animation-delay:0.15s">
       <rect x="40" y="64" width="265" height="112" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
       <rect x="40" y="64" width="4" height="112" rx="2" fill="#ff4d6d"/>
