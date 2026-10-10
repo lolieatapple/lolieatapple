@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" width="1200" height="470" role="img" aria-label="12,908 GitHub contributions since 2019">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" width="1200" height="470" role="img" aria-label="12,909 GitHub contributions since 2019">
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#0b1020"/>
@@ -40,7 +40,7 @@
   <circle class="orb o2" cx="180" cy="399.5" r="120" fill="#ff4d6d" opacity="0.28" filter="url(#blur)"/>
   <circle class="orb o3" cx="660" cy="282" r="110" fill="#22d3ee" opacity="0.18" filter="url(#blur)"/>
   <text x="40" y="42" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="16" fill="#3ddc97">// by the numbers</text>
-  <text x="1160" y="42" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5d6690">auto-updated 2026-10-09</text>
+  <text x="1160" y="42" text-anchor="end" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#5d6690">auto-updated 2026-10-10</text>
   <g class="rise" style="animation-delay:0.15s">
       <rect x="40" y="64" width="265" height="112" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
       <rect x="40" y="64" width="4" height="112" rx="2" fill="#ff4d6d"/>
@@ -50,7 +50,7 @@
   <g class="rise" style="animation-delay:0.3s">
       <rect x="325" y="64" width="265" height="112" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
       <rect x="325" y="64" width="4" height="112" rx="2" fill="#3ddc97"/>
-      <text x="349" y="124" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" fill="#3ddc97">2,403</text>
+      <text x="349" y="124" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" fill="#3ddc97">2,404</text>
       <text x="349" y="154" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#9aa3c7">contributions in 2026</text>
     </g>
   <g class="rise" style="animation-delay:0.44999999999999996s">
@@ -120,7 +120,7 @@
       <rect class="now" x="614.4" y="426" width="51.2" height="0" rx="6" fill="url(#barNow)">
         <animate attributeName="height" from="0" to="145.8" begin="1.3s" dur="1s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/>
         <animate attributeName="y" from="426" to="280.2" begin="1.3s" dur="1s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/></rect>
-      <text class="rise" style="animation-delay:1.9s" x="640" y="272.2458552365548" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" fill="#3ddc97">2,403</text>
+      <text class="rise" style="animation-delay:1.9s" x="640" y="272.1852001617469" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" fill="#3ddc97">2,404</text>
       <text x="640" y="448" text-anchor="middle" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" fill="#3ddc97">2026 ▲</text>
     </g>
   <text x="740" y="228" font-family="'JetBrains Mono', 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#9aa3c7">top languages · by repo</text>
